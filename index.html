@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>VueJS Guide</title>
+        <link href="index.css">
+        <!-- development version, includes helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <!-- production version, optimized for size and speed -->
+        <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    </head>
+    <body>
+        <div id="app1">
+            {{ message }}
+        </div>
+        <div id="app2">
+            <span v-bind:title="message">Hover over me for the visit date</span>            
+        </div>
+        <div id="app3">
+            <span v-if="seen">Have you seen me?</span>
+        </div>
+        <div id="app4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+        <div id="app5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+        </div>
+        <div id="app6">
+            <p>{{ message }}</p>
+            <input v-model="message">
+        </div>
+
+        <script src="index.js"></script>
+    </body>
+</html>
